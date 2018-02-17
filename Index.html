@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My first javascript MVC</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <style>
+  button {
+  margin: 5px;
+  color:white;
+  line-height: 20px;
+  font-weight: bold;
+  padding: 5px 15px;
+  background: #096309;
+  border-radius:5px;
+  border: none;
+}
+button:hover {
+  background: green;
+}
+  </style>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>My first javascript MVC</h1>
+  <p>Queiz!</p> 
+</div>
+  
+  <div class="container">  
+ 
+  <div class="row">
+  <div class="col-md-9">
+  <div class="card card-block bg-faded" style="padding:10px">
+  <p id="quesDesc">The form below contains three radio buttons. The last option is disabled:</p>
+  <div class="alert alert-info">        
+  <form>
+    <div class="radio">
+      <label>
+		  <input type="radio"  name="optradio" id="optA" name="rdbOpt">
+		  <span id="lbloptA"></span>
+	  </label>
+    </div>
+    <div class="radio">
+      <label>
+		  <input type="radio" name="optradio" id="optB" name="rdbOpt">
+		  <span id="lbloptB"></span>
+	  </label>
+    </div>
+    <div class="radio">
+      <label>
+		  <input type="radio" name="optradio" id="optC" name="rdbOpt">
+		  <span id="lbloptC"></span>
+	  </label>
+    </div>
+	<div class="radio">
+      <label>
+		  <input type="radio" name="optradio" id="optD" name="rdbOpt">
+		  <span id="lbloptD"></span>
+	  </label>
+    </div>
+  </form>
+</div>
+  </div>   
+  </div>
+  <div class="col-md-3">
+  <div class="card card-block bg-faded" style="padding:10px">
+   <div id="quesList"></div>
+   </div>
+  </div>
+  </div> 
+  </div>
+  
+  
+
+
+<script src="./app.js"></script>
+</body>
+</html>
