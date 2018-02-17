@@ -55,6 +55,7 @@ var octopus = {
 		model.currentQues = model.qs[0];
 		quesListView.init();
 		quesView.init();
+		resultView.init();
     },
 	
 	getCurrentQuestion: function(){
@@ -69,8 +70,12 @@ var octopus = {
 		model.currentQues = question;
 	},
 	
-	updateCurrentQuestionYourAns: function(question,optSelected){
+	updateCurrentQuestionYourAns: function(question,optSelected){	
+			
 		question.YourAns = optSelected;
+		if(question.YourAns == question.CorrectAns){
+				resultView.show();
+		}
 	}
 	
 	
@@ -91,36 +96,60 @@ var quesView = {
 		this.lbloptD = document.getElementById("lbloptD");
 		
 		
-		this.btnNext = document.getElementById("btnNext");
+		var radios = document.querySelectorAll('input');
+
+		for(var i = radios.length; i--; ) {
+			radios[i].addEventListener('click',(function(){
+				return function(){
+					var currentQs = octopus.getCurrentQuestion();
+					octopus.updateCurrentQuestionYourAns(currentQs, this.getAttribute('id'));
+				}
+			})());
+		}
+		
 		this.render();
 	},
 	
 	render: function(){
-		debugger;
-		var currentQs = octopus.getCurrentQuestion();
+	
+		var currentQs = octopus.getCurrentQuestion();		
 		this.desc.textContent = currentQs.desc;
-		this.optA.value = currentQs.optA;
+		debugger;
+		if(currentQs.YourAns == "optA"){
+			this.optA.checked = true;
+		}
+		else if(currentQs.YourAns == "optB"){
+			this.optB.checked = true;
+		}
+		else if(currentQs.YourAns == "optC"){
+			this.optC.checked = true;
+		}
+		else if(currentQs.YourAns == "optD"){
+			this.optD.checked = true;
+		}
+		else{
+			this.optA.checked = false;
+			this.optB.checked = false;
+			this.optC.checked = false;
+			this.optD.checked = false;
+		}
+		this.optA.value = currentQs.optA;		
 		this.lbloptA.textContent = currentQs.optA;
+		
 
 		this.optB.value = currentQs.optB;
 		this.lbloptB.textContent = currentQs.optB;
+		
 
 		this.optC.value = currentQs.optC;
 		this.lbloptC.textContent = currentQs.optC;
+		
 		
 		this.optD.value = currentQs.optD;	
 		this.lbloptD.textContent = currentQs.optD;
 		
 		
-		var radios = document.querySelectorAll('input');
-
-		for(var i = radios.length; i--; ) {
-			radios[i].addEventListener('click',(function(questionCopy){
-				return function(){
-					octopus.updateCurrentQuestionYourAns(questionCopy, this.getAttribute('id'));					
-				}
-			})(currentQs));
-		}
+		
 	}
 	
 	
@@ -157,5 +186,23 @@ var quesListView = {
 	}	
 }
 
-
+var resultView = {
+	init: function(){
+		var me = this;
+		me.modal = document.getElementById('myModal');
+		var span = document.getElementsByClassName("close-model")[0];
+		span.onclick = function() {
+			
+			me.modal.style.display = "none";
+		};
+		window.onclick = function(event) {
+			if (event.target == me.modal) {
+				me.modal.style.display = "none";
+			}
+		};
+	},
+	show: function(){
+		this.modal.style.display = "block";
+	}
+}
 octopus.init();
