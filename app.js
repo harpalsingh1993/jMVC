@@ -101,12 +101,25 @@ var octopus = {
 		model.currentQues = question;
 	},
 	
-	updateCurrentQuestionYourAns: function(question,optSelected){	
-			
+	updateCurrentQuestionYourAns: function(question,optSelected){				
 		question.YourAns = optSelected;
 		if(question.YourAns == question.CorrectAns){
-				resultView.show();
+				resultView.show("Correct");
 		}
+		else{
+			resultView.show("InCorrect");
+		}
+	},
+	getScores: function(){
+		var i,isCorrect,count = 0;
+		for(i=0;i< model.qs.length;i++)
+		{
+			if(model.qs[i].CorrectAns === model.qs[i].YourAns)
+			{
+				count++ ;
+			}
+		}
+		return "You got " + count +" out of " + model.qs.length +" ";
 	}
 	
 	
@@ -190,6 +203,10 @@ var quesListView = {
 	
 	init: function(){
 		this.quesListEl = document.getElementById("quesList");
+		this.btnResult = document.getElementById("btnSubmit");
+		this.btnResult.onclick = function(){
+			resultView.show(octopus.getScores());
+		};
 		this.render();
 	},
 	
@@ -202,7 +219,7 @@ var quesListView = {
 		{
 			ques = quesList[i];
 			elem = document.createElement('button');
-			//elem.addClass("btn btn-primary");
+			
 			elem.innerHTML  = ques.quesNo;
 			elem.addEventListener('click',(function(questionCopy){
 				return function(){
@@ -222,9 +239,9 @@ var resultView = {
 	init: function(){
 		var me = this;
 		me.modal = document.getElementById('myModal');
+		me.modalbodyContent = document.getElementsByClassName('modal-body')[0];
 		var span = document.getElementsByClassName("close-model")[0];
-		span.onclick = function() {
-			
+		span.onclick = function() {			
 			me.modal.style.display = "none";
 		};
 		window.onclick = function(event) {
@@ -233,8 +250,9 @@ var resultView = {
 			}
 		};
 	},
-	show: function(){
+	show: function(bodyContent){
 		this.modal.style.display = "block";
+		this.modalbodyContent.innerHTML = bodyContent;
 	}
 }
 octopus.init();
