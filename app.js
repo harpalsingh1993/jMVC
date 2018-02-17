@@ -34,6 +34,36 @@ var model = {
 	},
 	{	
 		quesNo: 4,
+		desc: 'Which of the following numbers is farthest from the number 1 on the number line?',
+		optA: '1',
+		optB: '2',
+		optC: '3',
+		optD: '4',
+		CorrectAns: 'optD',
+		YourAns:'NA'
+	},
+	{	
+		quesNo: 5,
+		desc: 'If 5x plus 32 equals 4 minus 2x what is the value of x ?',
+		optA: '1',
+		optB: '2',
+		optC: '3',
+		optD: '4',
+		CorrectAns: 'optD',
+		YourAns:'NA'
+	},
+	{	
+		quesNo: 6,
+		desc: 'Which of the following numbers is farthest from the number 1 on the number line?',
+		optA: '1',
+		optB: '2',
+		optC: '3',
+		optD: '4',
+		CorrectAns: 'optD',
+		YourAns:'NA'
+	},
+	{	
+		quesNo: 7,
 		desc: 'If 5x plus 32 equals 4 minus 2x what is the value of x ?',
 		optA: '1',
 		optB: '2',
@@ -42,6 +72,7 @@ var model = {
 		CorrectAns: 'optD',
 		YourAns:'NA'
 	}
+	
 	]
 }
 
