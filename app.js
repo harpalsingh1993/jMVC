@@ -206,6 +206,7 @@ var quesListView = {
 			elem.innerHTML  = ques.quesNo;
 			elem.addEventListener('click',(function(questionCopy){
 				return function(){
+					this.style.background = "red";
 					octopus.setCurrentQuestion(questionCopy);
 					quesView.render()
 				}
