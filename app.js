@@ -4,75 +4,44 @@ var model = {
 	qs:[
 	{	
 		quesNo: 1,
-		desc: 'The name of faculty, whos conversation with student was this <br \><b>sir</b>: kyu baat kar rhe ho.<br \><b>student</b>: mai nhi sir ye bol raha tha. <br \> <b>sir</b>: wo jale, mare, kate usme aag lag jaye, tu apna muh band rakh',
-		optA: 'Mr. Sachin Sharma',
-		optB: 'Mr.Ashok kumar ahuja',
-		optC: 'Mr. A k raja',
-		optD: 'Mr Shatish',
-		CorrectAns: 'optB',
+		desc: 'Nuclear sizes are expressed in a unit named',
+		optA: 'Fermi',
+		optB: 'angstrom',
+		optC: 'newton',
+		optD: 'tesla',
+		CorrectAns: 'optA',
 		YourAns:'NA'
 	},
 	{	
 		quesNo: 2,
-		desc: "Whos name was Dadda",
-		optA: 'Mr. Sachin Sharma',
-		optB: 'Mr.Ashok kumar ahuja',
-		optC: 'Mr. A k raja',
-		optD: 'Mr Shatish',
+		desc: "The absorption of ink by blotting paper involves",
+		optA: 'viscosity of ink',
+		optB: 'capillary action phenomenon',
+		optC: 'diffusion of ink through the blotting',
+		optD: 'siphon action',
 		CorrectAns: 'optB',
 		YourAns:'NA'
 	},
 	{	
 		quesNo: 3,
-		desc: 'The figure above shows the graph of the function f, defined by f of x = the absolute value of 2x, end absolute value, + 4 for all numbers x. For which of the following functions g, defined for all numbers x, does the graph of g intersect the graph of f ?',
-		optA: '1',
-		optB: '2',
-		optC: '3',
-		optD: '4',
-		CorrectAns: 'optC',
+		desc: 'Brass gets discoloured in air because of the presence of which of the following gases in air?',
+		optA: 'Oxygen',
+		optB: 'Hydrogen sulphide',
+		optC: 'Carbon dioxide',
+		optD: 'Nitrogen',
+		CorrectAns: 'optB',
 		YourAns:'NA'
 	},
 	{	
 		quesNo: 4,
-		desc: 'Which of the following numbers is farthest from the number 1 on the number line?',
-		optA: '1',
-		optB: '2',
-		optC: '3',
-		optD: '4',
-		CorrectAns: 'optD',
-		YourAns:'NA'
-	},
-	{	
-		quesNo: 5,
-		desc: 'If 5x plus 32 equals 4 minus 2x what is the value of x ?',
-		optA: '1',
-		optB: '2',
-		optC: '3',
-		optD: '4',
-		CorrectAns: 'optD',
-		YourAns:'NA'
-	},
-	{	
-		quesNo: 6,
-		desc: 'Which of the following numbers is farthest from the number 1 on the number line?',
-		optA: '1',
-		optB: '2',
-		optC: '3',
-		optD: '4',
-		CorrectAns: 'optD',
-		YourAns:'NA'
-	},
-	{	
-		quesNo: 7,
-		desc: 'If 5x plus 32 equals 4 minus 2x what is the value of x ?',
-		optA: '1',
-		optB: '2',
-		optC: '3',
-		optD: '4',
-		CorrectAns: 'optD',
+		desc: 'Which of the following is a non metal that remains liquid at room temperature?',
+		optA: 'Phosphorous',
+		optB: 'Bromine',
+		optC: 'Chlorine',
+		optD: 'Helium',
+		CorrectAns: 'optB',
 		YourAns:'NA'
 	}
-	
 	]
 }
 
