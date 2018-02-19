@@ -4,11 +4,11 @@ var model = {
 	qs:[
 	{	
 		quesNo: 1,
-		desc: 'Who has got hieghest in M.Tech',
-		optA: 'Harpal',
-		optB: 'Sourabh',
-		optC: 'Durgesh',
-		optD: 'other',
+		desc: 'Nuclear sizes are expressed in a unit named',
+		optA: 'Fermi',
+		optB: 'angstrom',
+		optC: 'newton',
+		optD: 'tesla',
 		CorrectAns: 'optA',
 		YourAns:'NA'
 	},
