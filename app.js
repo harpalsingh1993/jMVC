@@ -4,21 +4,21 @@ var model = {
 	qs:[
 	{	
 		quesNo: 1,
-		desc: 'Which of the following numbers is farthest from the number 1 on the number line?',
-		optA: '1',
-		optB: '2',
-		optC: '3',
-		optD: '4',
-		CorrectAns: 'optA',
+		desc: 'The name of faculty, whos conversation with student was this <br \><b>sir</b>: kyu baat kar rhe ho.<br \><b>student</b>: mai nhi sir ye bol raha tha. <br \> <b>sir</b>: wo jale, mare, kate usme aag lag jaye, tu apna muh band rakh',
+		optA: 'Mr. Sachin Sharma',
+		optB: 'Mr.Ashok kumar ahuja',
+		optC: 'Mr. A k raja',
+		optD: 'Mr Shatish',
+		CorrectAns: 'optB',
 		YourAns:'NA'
 	},
 	{	
 		quesNo: 2,
-		desc: 'A car got 33 miles per gallon using gasoline that cost $2.95 per gallon. Approximately what was the cost, in dollars, of the gasoline used in driving the car 350 miles?',
-		optA: '1',
-		optB: '2',
-		optC: '3',
-		optD: '4',
+		desc: "Whos name was Dadda",
+		optA: 'Mr. Sachin Sharma',
+		optB: 'Mr.Ashok kumar ahuja',
+		optC: 'Mr. A k raja',
+		optD: 'Mr Shatish',
 		CorrectAns: 'optB',
 		YourAns:'NA'
 	},
@@ -157,7 +157,7 @@ var quesView = {
 	render: function(){
 	
 		var currentQs = octopus.getCurrentQuestion();		
-		this.desc.textContent = currentQs.desc;
+		this.desc.innerHTML = currentQs.desc;
 		debugger;
 		if(currentQs.YourAns == "optA"){
 			this.optA.checked = true;
@@ -205,7 +205,11 @@ var quesListView = {
 		this.quesListEl = document.getElementById("quesList");
 		this.btnResult = document.getElementById("btnSubmit");
 		this.btnResult.onclick = function(){
-			resultView.show(octopus.getScores());
+			//resultView.show(octopus.getScores());
+			alert(octopus.getScores());
+			window.location.reload();
+			//setTimeout(function(){  }, 3000);
+			
 		};
 		this.render();
 	},
