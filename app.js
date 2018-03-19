@@ -4,12 +4,12 @@ var model = {
 	qs:[
 	{	
 		quesNo: 1,
-		desc: 'Nuclear sizes are expressed in a unit named',
-		optA: 'Fermi',
-		optB: 'angstrom',
-		optC: 'newton',
-		optD: 'tesla',
-		CorrectAns: 'optA',
+		desc: "The absorption of ink by blotting paper involves",
+		optA: 'viscosity of ink',
+		optB: 'capillary action phenomenon',
+		optC: 'diffusion of ink through the blotting',
+		optD: 'siphon action',
+		CorrectAns: 'optB',
 		YourAns:'NA'
 	},
 	{	
