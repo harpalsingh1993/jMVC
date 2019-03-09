@@ -4,7 +4,7 @@ var model = {
 	qs:[
 	{	
 		quesNo: 1,
-		desc: "The absorption of ink by blotting paper involves",
+		desc: "The absorption ",
 		optA: 'viscosity of ink',
 		optB: 'capillary action phenomenon',
 		optC: 'diffusion of ink through the blotting',
@@ -14,7 +14,7 @@ var model = {
 	},
 	{	
 		quesNo: 2,
-		desc: "The absorption of ink by blotting paper involves",
+		desc: "All fetaures",
 		optA: 'viscosity of ink',
 		optB: 'capillary action phenomenon',
 		optC: 'diffusion of ink through the blotting',
